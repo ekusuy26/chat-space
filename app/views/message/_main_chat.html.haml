@@ -6,7 +6,7 @@
       %li.chat-main__header__left-box__current-member
         member:name
     .chat-main__header__right-box
-      = link_to "#", class: "btn" do
+      = link_to edit_group_path(current_user), class: "btn" do
         Edit
 
   .chat-main__messages
