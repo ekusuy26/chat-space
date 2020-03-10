@@ -12,14 +12,9 @@
           %span<>
   .side-bar__groups
     - current_user.groups.each do |group|
-      .group
-        = link_to '#' do
-          .group__group-name
+      .side-bar__groups__group
+        = link_to group_messages_path(group) do
+          .side-bar__groups__group__group-name
             = group.name
-          .group__message
-            メッセージはまだありません。
-    .side-bar__groups__group
-      .side-bar__groups__group__group-name
-        techcamp
-      .side-bar__groups__group__message
-        まだメッセージはありません
+          .side-bar__groups__group__message
+            = group.show_last_message
