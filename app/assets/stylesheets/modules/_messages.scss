@@ -137,13 +137,13 @@
       }
     }
     &__form{
-      .new_message{
-        display: flex;
-        justify-content: space-between;
-      }
       @include size(90px, initial);
       @include color (initial ,#d2d2d2);
       padding: 20px 40px;
+            .new_message{
+              display: flex;
+              justify-content: space-between;
+            }
       &__input-box{
         .form__message{
           height: 100%;
