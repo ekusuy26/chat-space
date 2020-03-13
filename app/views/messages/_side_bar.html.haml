@@ -5,11 +5,13 @@
         = current_user.nickname
       .side-bar__side-header__box__menu
         = link_to "groups/new", class: "btn" do
-          = icon('far', 'edit')
-          %span<>
+          = fa_icon 'pencil-square-o', class: 'btn' 
+          -# = icon('far', 'edit')
+          %span
         = link_to edit_user_path(current_user), class: "btn" do
-          = icon('fas', 'cog')
-          %span<>
+          = fa_icon 'cog', class: 'btn'
+          -# = icon('fas', 'cog')
+          %span
   .side-bar__groups
     - current_user.groups.each do |group|
       .side-bar__groups__group
